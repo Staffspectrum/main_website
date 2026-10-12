@@ -1,0 +1,203 @@
+.processSection {
+  background-color: #ffffff;
+  padding: 8rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.header {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.label {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 600;
+  color: #000000;
+  line-height: 1.2;
+}
+
+.headerDesc {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #000000;
+  text-align: justify;
+}
+
+/* Vertical Timeline Track */
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+  padding-left: 125px;
+  margin-top: 3rem;
+  max-width: 800px;
+}
+
+.timelineLine {
+  position: absolute;
+  left: 44px;
+  top: 30px;
+  bottom: auto;
+  width: 2px;
+  background-color: #e2e8f0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.timelineProgressLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #007CC4;
+  transform-origin: top center;
+  transition: transform 0.05s linear;
+  will-change: transform;
+}
+
+/* Step Rows */
+.step {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.numberContainer {
+  position: absolute;
+  left: -125px;
+  width: 90px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.numberWrapper {
+  width: 60px;
+  height: 60px;
+  background-color: #ffffff;
+  border: 2px solid #cbd5e1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: all 450ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.number {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #64748b;
+  transition: all 400ms ease;
+}
+
+/* Scroll Fade & Slide Reveal Transition */
+.stepContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  opacity: 0.08;
+  transform: translateY(24px);
+  filter: blur(4px);
+  transition: all 800ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stepTitle {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.stepDesc {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #334155;
+  text-align: justify;
+}
+
+/* Active State Styles */
+.step.active .numberWrapper {
+  border-color: #007CC4;
+  background-color: #007CC4;
+  box-shadow: 0 0 20px rgba(0, 124, 196, 0.35), 0 0 0 6px rgba(0, 124, 196, 0.12);
+  transform: scale(1.08);
+}
+
+.step.active .number {
+  color: #ffffff;
+}
+
+.step.active .stepContent {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Responsive Scaling */
+@media (max-width: 767px) {
+  .processSection {
+    padding: 5rem 0;
+  }
+
+  .timeline {
+    padding-left: 70px;
+    gap: 3.5rem;
+  }
+
+  .timelineLine {
+    left: 34px;
+  }
+
+  .numberContainer {
+    left: -70px;
+    width: 70px;
+    height: 50px;
+  }
+
+  .numberWrapper {
+    width: 50px;
+    height: 50px;
+  }
+
+  .stepTitle {
+    font-size: 1.2rem;
+  }
+
+  .headerDesc,
+  .stepDesc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    text-align-last: left;
+  }
+}

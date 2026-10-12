@@ -1,0 +1,150 @@
+.sectionWrapper {
+  margin-top: 3.5rem;
+  margin-bottom: 5.5rem;
+  width: 100%;
+}
+
+.cardContainer {
+  background-color: #ffffff;
+  border-radius: 32px;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #000000;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+}
+
+.contentCol {
+  width: 100%;
+  max-width: 100%;
+}
+
+.introLabel {
+  display: inline-block;
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #007CC4;
+  margin-bottom: 0.5rem;
+}
+
+.mainTitle {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: clamp(2.2rem, 3.2vw, 3.2rem);
+  font-weight: 600;
+  color: #000000;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 2.5rem;
+}
+
+.itemsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.missionItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.75rem;
+}
+
+.plusIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.itemTitle {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 1.55rem;
+  font-weight: 600;
+  color: #000000;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.itemBody {
+  padding-left: 2.05rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.itemText {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.65;
+  margin: 0;
+  text-align: left;
+}
+
+.itemSubtext {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.65;
+  margin: 0;
+  text-align: left;
+}
+
+/* ── Tablet refinement (Keep 2-column side-by-side layout) ────────────── */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cardContainer {
+    padding: 3rem 2.5rem;
+  }
+
+  .itemsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* ── Mobile Responsive styles ──────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .cardContainer {
+    padding: 2.25rem 1.25rem;
+    border-radius: 24px;
+  }
+
+  .mainTitle {
+    font-size: clamp(1.8rem, 6vw, 2.1rem);
+    margin-bottom: 2rem;
+  }
+
+  .itemsGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .itemBody {
+    padding-left: 0;
+  }
+
+  .itemText,
+  .itemSubtext {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    text-align-last: left;
+  }
+}

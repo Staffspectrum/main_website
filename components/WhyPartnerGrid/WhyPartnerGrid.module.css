@@ -1,0 +1,710 @@
+/* ── Desktop & Base Grid ─────────────────────────────────────────────────── */
+.whyGrid5 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: clamp(1.25rem, 1.8vw, 2rem);
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+}
+
+.whyCard {
+  grid-column: span 2;
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50% !important;
+  padding: 1.5rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.55rem;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.06);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  outline: none;
+  font: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.whyCard:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+.whyCard:focus-visible {
+  outline: 3px solid #0284c7;
+  outline-offset: 4px;
+}
+
+/* 5 Card Themed Variants */
+.whyCard_business-aligned {
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+  border-color: #0284c7;
+}
+.whyCard_business-aligned .iconContainer {
+  background-color: #0284c7;
+  color: #ffffff;
+}
+.whyCard_business-aligned .cardTitle {
+  color: #0369a1;
+}
+.whyCard_business-aligned .tapBadge {
+  color: #0284c7;
+  border-color: rgba(2, 132, 199, 0.35);
+}
+
+.whyCard_practical-expertise {
+  background: linear-gradient(135deg, #e0e7ff 0%, #eef2ff 100%);
+  border-color: #4f46e5;
+}
+.whyCard_practical-expertise .iconContainer {
+  background-color: #4f46e5;
+  color: #ffffff;
+}
+.whyCard_practical-expertise .cardTitle {
+  color: #3730a3;
+}
+.whyCard_practical-expertise .tapBadge {
+  color: #4f46e5;
+  border-color: rgba(79, 70, 229, 0.35);
+}
+
+.whyCard_pan-india {
+  background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+  border-color: #059669;
+}
+.whyCard_pan-india .iconContainer {
+  background-color: #059669;
+  color: #ffffff;
+}
+.whyCard_pan-india .cardTitle {
+  color: #065f46;
+}
+.whyCard_pan-india .tapBadge {
+  color: #059669;
+  border-color: rgba(5, 150, 105, 0.35);
+}
+
+.whyCard_industry-specific {
+  grid-column: 2 / span 2;
+  background: linear-gradient(135deg, #fef3c7 0%, #fffbeb 100%);
+  border-color: #d97706;
+}
+.whyCard_industry-specific .iconContainer {
+  background-color: #d97706;
+  color: #ffffff;
+}
+.whyCard_industry-specific .cardTitle {
+  color: #92400e;
+}
+.whyCard_industry-specific .tapBadge {
+  color: #d97706;
+  border-color: rgba(217, 119, 6, 0.35);
+}
+
+.whyCard_long-term {
+  grid-column: 4 / span 2;
+  background: linear-gradient(135deg, #ffe4e6 0%, #fff1f2 100%);
+  border-color: #e11d48;
+}
+.whyCard_long-term .iconContainer {
+  background-color: #e11d48;
+  color: #ffffff;
+}
+.whyCard_long-term .cardTitle {
+  color: #9f1239;
+}
+.whyCard_long-term .tapBadge {
+  color: #e11d48;
+  border-color: rgba(225, 29, 72, 0.35);
+}
+
+/* Icon Container */
+.iconContainer {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.whyCard:hover .iconContainer {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.iconContainer svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Titles and Descriptions */
+.cardTitle {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: clamp(1.05rem, 1.18vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.22;
+  margin: 0;
+  max-width: 260px;
+  text-align: center !important;
+  text-align-last: center !important;
+  -webkit-hyphens: none !important;
+  -ms-hyphens: none !important;
+  hyphens: none !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  text-wrap: balance;
+}
+
+.cardDesc {
+  font-family: var(--font-inter), sans-serif;
+  font-size: clamp(0.78rem, 0.86vw, 0.88rem);
+  line-height: 1.42;
+  color: #1e293b;
+  margin: 0;
+  max-width: 260px;
+  padding: 0 0.35rem;
+  text-align: center !important;
+  text-align-last: center !important;
+  text-justify: auto !important;
+  -webkit-hyphens: none !important;
+  -ms-hyphens: none !important;
+  hyphens: none !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  text-wrap: balance;
+}
+
+/* Mobile Tap Badge (hidden on desktop) */
+.tapBadge {
+  display: none;
+}
+
+/* ── Interactive Modal Dialog Styles ────────────────────────────────────── */
+.modalRoot {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  box-sizing: border-box;
+}
+
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.68);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1;
+}
+
+.modalWrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  justify-content: center;
+}
+
+.modalCard {
+  background: #ffffff;
+  border-radius: 28px;
+  border-width: 2px;
+  border-style: solid;
+  padding: 1.85rem 1.65rem 1.5rem 1.65rem;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.modalHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.closeBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  border: none;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.closeBtn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+  transform: rotate(90deg);
+}
+
+.modalIconWrap {
+  margin-bottom: 1rem;
+}
+
+.modalIcon {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalIcon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.modalTitle {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: clamp(1.25rem, 4.5vw, 1.5rem);
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 0.85rem 0;
+  letter-spacing: -0.02em;
+  text-align: center !important;
+  text-align-last: center !important;
+  -webkit-hyphens: none !important;
+  -ms-hyphens: none !important;
+  hyphens: none !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  text-wrap: balance;
+}
+
+.modalDesc {
+  font-family: var(--font-inter), sans-serif;
+  font-size: clamp(0.92rem, 3.2vw, 1.02rem);
+  line-height: 1.62;
+  color: #334155;
+  margin: 0 0 1.65rem 0;
+  padding: 0 0.25rem;
+  text-align: center !important;
+  text-align-last: center !important;
+  text-justify: auto !important;
+  -webkit-hyphens: none !important;
+  -ms-hyphens: none !important;
+  hyphens: none !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  text-wrap: balance;
+}
+
+.modalFooter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  align-items: center;
+}
+
+.modalNavGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.navBtn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.navBtn:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+  transform: scale(1.08);
+}
+
+.modalDots {
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
+}
+
+.modalDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.activeDot {
+  width: 22px;
+  border-radius: 9999px;
+}
+
+.dismissBtn {
+  width: 100%;
+  max-width: 240px;
+  height: 44px;
+  border-radius: 9999px;
+  border: none;
+  color: #ffffff;
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dismissBtn:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+}
+
+.dismissBtn:active {
+  transform: scale(0.98);
+}
+
+/* ── Laptop View Refinement (1025px to 1440px) ─────────────────────────── */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .whyGrid5 {
+    gap: 1.35rem;
+  }
+
+  .whyCard {
+    max-width: 350px;
+    padding: 1.35rem 1.15rem;
+    gap: 0.48rem;
+  }
+
+  .iconContainer {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .iconContainer svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .cardTitle {
+    font-size: 1.05rem;
+    line-height: 1.2;
+    max-width: 235px;
+  }
+
+  .cardDesc {
+    font-size: 0.79rem;
+    line-height: 1.38;
+    max-width: 240px;
+    padding: 0 0.25rem;
+  }
+}
+
+/* ── Tablet Breakpoint ───────────────────────────────────────────────────── */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .whyGrid5 {
+    gap: 0.95rem;
+  }
+
+  .whyCard {
+    max-width: 275px;
+    padding: 1.1rem 0.75rem;
+    gap: 0.4rem;
+  }
+
+  .iconContainer {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    min-height: 38px;
+  }
+
+  .iconContainer svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .cardTitle {
+    font-size: 0.92rem;
+    line-height: 1.18;
+    max-width: 190px;
+  }
+
+  .cardDesc {
+    font-size: 0.72rem;
+    line-height: 1.32;
+    max-width: 200px;
+    padding: 0;
+  }
+}
+
+/* ── Mobile Responsive View (Max Width 767px) ────────────────────────────── */
+@media (max-width: 767px) {
+  .whyGrid5 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.15rem 0.85rem;
+    justify-items: center;
+    align-items: center;
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+  }
+
+  .whyCard {
+    grid-column: auto;
+    width: 100%;
+    max-width: 168px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50% !important;
+    padding: 0.85rem 0.55rem;
+    gap: 0.35rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+
+  .whyCard:active {
+    transform: scale(0.95);
+  }
+
+  /* Reset grid placement on mobile for card 4 and card 5 */
+  .whyCard_industry-specific {
+    grid-column: auto;
+  }
+
+  .whyCard_long-term {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-top: 0.2rem;
+  }
+
+  .iconContainer {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    min-height: 38px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .iconContainer svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .cardTitle {
+    font-size: clamp(0.72rem, 2.7vw, 0.82rem);
+    line-height: 1.18;
+    font-weight: 750;
+    padding: 0 0.25rem;
+    max-width: 140px;
+  }
+
+  /* Hide overflowing multi-line paragraph inside small circle on mobile */
+  .cardDesc {
+    display: none;
+  }
+
+  /* Show elegant interactive pill badge to prompt tap */
+  .tapBadge {
+    display: inline-block;
+    text-align: center;
+    font-family: var(--font-outfit), sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    padding: 2.5px 10px;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-top: 1px;
+  }
+
+  /* ── Circular Modal Popup in Mobile View ───────────────────────────────── */
+  .modalWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modalCard {
+    width: min(92vw, 365px);
+    height: min(92vw, 365px);
+    max-width: 365px;
+    max-height: 365px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50% !important;
+    padding: 1.65rem 1.25rem 1.15rem 1.25rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .modalHeader {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    width: auto;
+    margin-bottom: 0;
+    z-index: 10;
+  }
+
+  .closeBtn {
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .closeBtn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .modalIconWrap {
+    margin-bottom: 0.35rem;
+  }
+
+  .modalIcon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+  }
+
+  .modalIcon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .modalTitle {
+    font-size: clamp(1.05rem, 4.4vw, 1.25rem);
+    line-height: 1.22;
+    margin: 0 0 0.45rem 0;
+    max-width: 260px;
+    padding: 0 0.4rem;
+    text-align: center !important;
+    text-align-last: center !important;
+    -webkit-hyphens: none !important;
+    -ms-hyphens: none !important;
+    hyphens: none !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    text-wrap: balance;
+  }
+
+  .modalDesc {
+    font-size: clamp(0.76rem, 3.1vw, 0.88rem);
+    line-height: 1.48;
+    margin: 0 0 0.65rem 0;
+    max-width: 280px;
+    padding: 0 0.4rem;
+    text-align: center !important;
+    text-align-last: center !important;
+    text-justify: auto !important;
+    -webkit-hyphens: none !important;
+    -ms-hyphens: none !important;
+    hyphens: none !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    text-wrap: balance;
+  }
+
+  .modalFooter {
+    margin-top: 0.55rem;
+    gap: 0.65rem;
+    width: 100%;
+  }
+
+  .modalNavGroup {
+    gap: 0.65rem;
+  }
+
+  .navBtn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .navBtn svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .modalDots {
+    gap: 0.35rem;
+  }
+
+  .modalDot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .activeDot {
+    width: 16px;
+  }
+
+  .dismissBtn {
+    margin-top: 0.25rem;
+    max-width: 140px;
+    height: 35px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    border-radius: 9999px;
+  }
+}

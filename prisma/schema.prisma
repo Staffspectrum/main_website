@@ -1,0 +1,90 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model AdminUser {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  name         String
+  role         String   @default("ADMIN")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([email])
+}
+
+model ContactEnquiry {
+  id           String   @id @default(cuid())
+  persona      String
+  interests    String[]
+  name         String
+  email        String
+  mobile       String
+  message      String
+  emailStatus  String   @default("PENDING") // PENDING, SENT, FAILED, SKIPPED
+  emailError   String?
+  clientIpHash String?
+  status       String   @default("NEW") // NEW, READ, RESOLVED
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([createdAt])
+  @@index([emailStatus])
+  @@index([status])
+}
+
+model Job {
+  id               String           @id @default(cuid())
+  linkSlug         String           @unique
+  title            String
+  department       String
+  location         String
+  employmentType   String           @default("Full-Time")
+  experienceLevel  String?
+  qualification    String?
+  desc             String
+  overview         String
+  responsibilities String[]
+  requirements     String[]
+  benefits         String[]
+  status           String           @default("PUBLISHED") // "DRAFT", "PUBLISHED", "CLOSED"
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+  applications     JobApplication[]
+
+  @@index([status])
+  @@index([linkSlug])
+  @@index([createdAt])
+}
+
+model JobApplication {
+  id               String   @id @default(cuid())
+  jobId            String
+  // Restrict deletion of a Job if applications exist (preserves retention and prevents accidental data loss)
+  job              Job      @relation(fields: [jobId], references: [id], onDelete: Restrict)
+  applicantName    String
+  email            String
+  phone            String
+  location         String?
+  experience       String?
+  portfolio        String?
+  note             String?
+  r2ObjectKey      String   @unique
+  originalFileName String
+  mimeType         String   @default("application/pdf")
+  sizeBytes        Int
+  status           String   @default("NEW") // "NEW", "REVIEWED", "SHORTLISTED", "REJECTED"
+  clientIpHash     String?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@index([jobId])
+  @@index([email])
+  @@index([status])
+  @@index([createdAt])
+}

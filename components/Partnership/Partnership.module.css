@@ -1,0 +1,137 @@
+.partnershipSection {
+  padding: 8rem 0;
+  background-color: var(--background);
+}
+
+.header {
+  max-width: 600px;
+  margin-bottom: 5rem;
+}
+
+.title {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.description {
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.contentBlock {
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+  margin-bottom: 8rem;
+}
+
+.contentBlock:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.imageContainer {
+  flex: 1.2;
+  position: relative;
+  height: 450px;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.imageContainer img {
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+.textContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.blockTitle {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 2.25rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.checklistItem {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  color: var(--foreground);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.checkIcon {
+  width: 20px;
+  height: 20px;
+  color: #111;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.learnMore {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--foreground);
+  padding-bottom: 2px;
+  align-self: flex-start;
+  transition: opacity 0.2s ease;
+}
+
+.learnMore:hover {
+  opacity: 0.6;
+}
+
+/* ── Tablet refinement (Keep side-by-side content blocks) ─────────────── */
+@media (min-width: 768px) and (max-width: 992px) {
+  .contentBlock,
+  .contentBlock:nth-child(even) {
+    gap: 2.5rem;
+  }
+
+  .imageContainer {
+    width: 45%;
+    height: 340px;
+  }
+
+  .textContent {
+    width: 55%;
+  }
+}
+
+/* ── Mobile Responsive styles ──────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .contentBlock,
+  .contentBlock:nth-child(even) {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .imageContainer {
+    width: 100%;
+    height: 350px;
+  }
+}

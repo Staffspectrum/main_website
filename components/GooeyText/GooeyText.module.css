@@ -1,0 +1,45 @@
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.svgFilter {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.gooeyContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  height: 140px;
+}
+
+.text {
+  position: absolute;
+  display: inline-block;
+  user-select: none;
+  text-align: center;
+  font-family: var(--font-outfit), sans-serif;
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  color: #000000;
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .gooeyContainer {
+    height: 100px;
+  }
+  .text {
+    font-size: clamp(1.8rem, 8vw, 3.2rem);
+    letter-spacing: -0.5px;
+  }
+}

@@ -1,0 +1,255 @@
+.finalCtaSection {
+  background-color: #ffffff;
+  padding: 8rem 0;
+  border-bottom: none;
+}
+
+.card {
+  background: linear-gradient(135deg, #0C2754 0%, #007CC4 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 32px;
+  padding: 5rem 4rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.meshBg {
+  display: none;
+}
+
+.ctaContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.label {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #007CC4;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.15;
+}
+
+.description {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: justify !important;
+  text-justify: inter-word;
+  text-align-last: left !important;
+  -webkit-hyphens: none !important;
+  -ms-hyphens: none !important;
+  hyphens: none !important;
+  word-break: normal !important;
+}
+
+.brandBox {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  max-width: 600px;
+}
+
+.brandName {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 1.25rem;
+  font-weight: 750;
+  color: #ffffff;
+}
+
+.brandSubtitle {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+.ctaGroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+.btnArrow {
+  transition: transform 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+  .finalCtaSection {
+    padding: 4rem 0;
+  }
+
+  .card {
+    padding: 2.5rem 1.5rem;
+    border-radius: 24px;
+  }
+
+  .ctaContent {
+    gap: 1.25rem;
+  }
+
+  .title {
+    font-size: clamp(1.6rem, 5.5vw, 1.85rem);
+    line-height: 1.25;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: justify !important;
+    text-justify: inter-word;
+    text-align-last: left !important;
+    -webkit-hyphens: none !important;
+    -ms-hyphens: none !important;
+    hyphens: none !important;
+    word-break: normal !important;
+  }
+
+  .ctaGroup {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .primaryCta {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.9rem;
+    padding: 0.85rem 1.5rem;
+  }
+}
+.primaryCta {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  width: fit-content;
+}
+
+.primaryCta::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background-color: #0055ff;
+  z-index: -1;
+  transition: height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.primaryCta:hover {
+  color: #ffffff !important;
+  border-color: #0055ff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 85, 255, 0.25);
+}
+
+.primaryCta:hover::before {
+  height: 100%;
+}
+
+.secondaryCta {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  width: fit-content;
+}
+
+.secondaryCta::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background-color: #0055ff;
+  z-index: -1;
+  transition: height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.secondaryCta:hover {
+  color: #ffffff !important;
+  border-color: #0055ff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 85, 255, 0.25);
+}
+
+.secondaryCta:hover::before {
+  height: 100%;
+}

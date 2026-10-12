@@ -1,0 +1,217 @@
+.testimonialsSection {
+  padding: 8rem 0;
+  background-color: var(--bg-gray);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.globeBg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  opacity: 0.05;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+.label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  max-width: 600px;
+  margin: 0 auto 4rem;
+}
+
+/* ── Slider Track & Items ───────────────────────────────────── */
+.sliderWrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 1rem 0;
+}
+
+.sliderTrack {
+  display: flex;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.slideItem {
+  padding: 0 1rem;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.25rem;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.08);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #eee;
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.authorName {
+  font-family: var(--font-outfit), sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--foreground);
+}
+
+.authorRole {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.quote {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  font-style: italic;
+  margin: 0;
+}
+
+/* ── Navigation Controls & Dots ────────────────────────────── */
+.navControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+}
+
+.navBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  color: #111111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.navBtn:hover {
+  background: #111111;
+  color: #ffffff;
+  border-color: #111111;
+  transform: scale(1.05);
+}
+
+.dotsGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.dotActive {
+  background: #007CC4;
+  width: 24px;
+  border-radius: 10px;
+}
+
+/* ── Tablet refinement (Comfortable spacing for 3 cards on tablets) ───────── */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .title {
+    font-size: 2.75rem;
+    margin-bottom: 3rem;
+  }
+
+  .slideItem {
+    padding: 0 0.5rem;
+  }
+
+  .card {
+    padding: 2rem 1.25rem;
+  }
+
+  .quoteText {
+    font-size: 0.92rem;
+  }
+}
+
+/* ── Mobile Responsive Breakpoints ────────────────────────── */
+@media (max-width: 767px) {
+  .testimonialsSection {
+    padding: 5rem 0;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .card {
+    padding: 1.75rem 1.35rem;
+    gap: 0.85rem;
+  }
+
+  .slideItem {
+    padding: 0 0.5rem;
+  }
+}

@@ -1,0 +1,300 @@
+.whatWeDoSection {
+  background-color: #000000;
+  padding: 7rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Left Illustration Column - Direct Drawing (Not in a box) */
+.illustrationCol {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageWrapper {
+  width: 100%;
+  aspect-ratio: 560 / 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.illustrationImg {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 560 / 400;
+  object-fit: contain;
+  border-radius: 20px;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.4));
+}
+
+/* Floating UI Badges */
+.floatingCard {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 0.75rem 1.15rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  z-index: 5;
+  transition: transform 0.3s ease;
+}
+
+.floatingCard:hover {
+  transform: translateY(-4px);
+}
+
+/* 1. Payroll Badge (Left) */
+.payrollBadge {
+  top: 10%;
+  left: 2%;
+  background: #ffffff;
+  padding: 0.85rem 1.25rem;
+  border-radius: 16px;
+}
+
+.checkIcon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #10B981;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badgeText {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* 2. Profile Badge (Top Right) */
+.profileBadge {
+  top: 4%;
+  right: 4%;
+  border-radius: 14px;
+  padding: 0.6rem 1rem;
+}
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #3B82F6;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileName {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* 3. Time Off Request Badge (Right) */
+.requestBadge {
+  bottom: 8%;
+  right: 2%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.85rem 1.25rem;
+  width: 190px;
+}
+
+.requestHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.slackDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #EC4899;
+}
+
+.requestTitle {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.approveBtn {
+  width: 100%;
+  background-color: #F3F4F6;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.approveBtn:hover {
+  background-color: #E5E7EB;
+}
+
+/* Right Content Column */
+.contentCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.label {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: clamp(2.2rem, 3.5vw, 3rem);
+  font-weight: 600;
+  color: #007CC4;
+  line-height: 1.2;
+}
+
+.paragraph {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: #ffffff;
+  text-align: justify;
+}
+
+.servicesBtn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background-color: #ffffff;
+  color: #111827;
+  border: 1px solid #ffffff;
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  width: fit-content;
+  margin-top: 0.5rem;
+}
+
+.servicesBtn:hover {
+  color: #ffffff;
+  border-color: #0055ff;
+}
+
+.servicesBtn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background-color: #0055ff;
+  z-index: -1;
+  transition: height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.servicesBtn:hover::before {
+  height: 100%;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.servicesBtn:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* ── Tablet refinement (Keep 2-column layout) ─────────────────────────── */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .gridContainer {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+}
+
+/* ── Mobile Responsive Styles ──────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .whatWeDoSection {
+    padding: 4rem 0;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .illustrationCol {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .payrollBadge {
+    top: 4%;
+    left: 2%;
+    padding: 0.45rem 0.75rem;
+  }
+
+  .profileBadge {
+    top: 2%;
+    right: 2%;
+    padding: 0.4rem 0.75rem;
+  }
+
+  .requestBadge {
+    bottom: 2%;
+    right: 2%;
+    max-width: 150px;
+  }
+
+  .paragraph {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    text-align-last: left;
+  }
+}

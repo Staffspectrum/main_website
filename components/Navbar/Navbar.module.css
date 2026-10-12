@@ -1,0 +1,903 @@
+/* ==========================================================================
+   Full Top Header Navbar (Exact Match with Reference Photo 2)
+   ========================================================================== */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  transform-origin: center top;
+  width: 100%;
+  max-width: 100%;
+  height: 80px;
+  margin: 0 !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1010;
+  box-sizing: border-box;
+  border-radius: 0;
+  padding: 0 clamp(2rem, 5vw, 4.5rem);
+  transition: width 440ms cubic-bezier(0.16, 1, 0.3, 1),
+    max-width 440ms cubic-bezier(0.16, 1, 0.3, 1),
+    top 440ms cubic-bezier(0.16, 1, 0.3, 1),
+    height 440ms cubic-bezier(0.16, 1, 0.3, 1),
+    padding 440ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-radius 440ms cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 440ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 440ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 440ms cubic-bezier(0.16, 1, 0.3, 1),
+    backdrop-filter 440ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: width, height, top, border-radius;
+}
+
+/* ── Unscrolled: Light Theme (Over light background pages) ───────────────── */
+.unscrolled {
+  top: 0 !important;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.04) !important;
+  color: #0f172a !important;
+}
+
+/* ── Unscrolled: Dark Theme (Over dark hero on Home, CHRMP, About, etc.) ──── */
+.unscrolledDark {
+  top: 0 !important;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #ffffff;
+}
+
+/* ── Scrolled: Dynamic Island Floating Glassmorphic Pill Style ─────────── */
+/* Scrolled on light background: White glass Dynamic Island */
+.scrolled {
+  top: 0.75rem !important;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  width: calc(100% - 3rem) !important;
+  max-width: 1400px !important;
+  margin: 0 !important;
+  height: 58px !important;
+  padding: 0 1.75rem !important;
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(24px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
+  border-radius: 9999px !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.12),
+    0 4px 12px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
+  color: #0f172a !important;
+}
+
+/* Scrolled on dark background: Obsidian dark glass Dynamic Island */
+.scrolledDark {
+  top: 0.75rem !important;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  width: calc(100% - 3rem) !important;
+  max-width: 1400px !important;
+  margin: 0 !important;
+  height: 58px !important;
+  padding: 0 1.75rem !important;
+  background-color: rgba(10, 14, 22, 0.84) !important;
+  backdrop-filter: blur(24px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
+  border-radius: 9999px !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.45),
+    0 4px 14px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22) !important;
+  color: #ffffff !important;
+}
+
+/* ── Light Theme Elements (Unscrolled & Scrolled) ───────────────────────── */
+.unscrolled .logoTitle,
+.scrolled .logoTitle {
+  color: #0f172a !important;
+}
+
+.unscrolled .desktopNavLink,
+.unscrolled .desktopNavLink:link,
+.unscrolled .desktopNavLink:visited,
+.scrolled .desktopNavLink,
+.scrolled .desktopNavLink:link,
+.scrolled .desktopNavLink:visited {
+  color: #475569 !important;
+}
+
+.unscrolled .desktopNavLink:hover,
+.scrolled .desktopNavLink:hover {
+  color: #0f172a !important;
+}
+
+.unscrolled .activeNavLink,
+.unscrolled .activeNavLink:link,
+.unscrolled .activeNavLink:visited,
+.scrolled .activeNavLink,
+.scrolled .activeNavLink:link,
+.scrolled .activeNavLink:visited {
+  color: #0f172a !important;
+  font-weight: 600;
+}
+
+.unscrolled .activeNavLink::after,
+.scrolled .activeNavLink::after {
+  background: #0579f6 !important;
+}
+
+.unscrolled .contactBtnPill,
+.unscrolled .contactBtnPill:link,
+.unscrolled .contactBtnPill:visited,
+.scrolled .contactBtnPill,
+.scrolled .contactBtnPill:link,
+.scrolled .contactBtnPill:visited {
+  color: #0f172a !important;
+  border: 1.5px solid rgba(15, 23, 42, 0.28) !important;
+  background: transparent !important;
+}
+
+.unscrolled .contactBtnPill:hover,
+.scrolled .contactBtnPill:hover {
+  background: rgba(15, 23, 42, 0.06) !important;
+  border-color: #0f172a !important;
+  color: #0f172a !important;
+}
+
+.unscrolled .menuToggle,
+.unscrolled .menuText,
+.unscrolled .closeText,
+.scrolled .menuToggle,
+.scrolled .menuText,
+.scrolled .closeText {
+  color: #0f172a !important;
+}
+
+.unscrolled .indicatorLine,
+.scrolled .indicatorLine {
+  background-color: #0f172a !important;
+}
+
+/* ── Dark Theme Elements (Unscrolled Dark & Scrolled Dark) ──────────────── */
+.unscrolledDark .logoTitle,
+.scrolledDark .logoTitle {
+  color: #ffffff !important;
+}
+
+.unscrolledDark .desktopNavLink,
+.unscrolledDark .desktopNavLink:link,
+.unscrolledDark .desktopNavLink:visited,
+.scrolledDark .desktopNavLink,
+.scrolledDark .desktopNavLink:link,
+.scrolledDark .desktopNavLink:visited {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+.unscrolledDark .desktopNavLink:hover,
+.scrolledDark .desktopNavLink:hover {
+  color: #ffffff !important;
+}
+
+.unscrolledDark .activeNavLink,
+.unscrolledDark .activeNavLink:link,
+.unscrolledDark .activeNavLink:visited,
+.scrolledDark .activeNavLink,
+.scrolledDark .activeNavLink:link,
+.scrolledDark .activeNavLink:visited {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.unscrolledDark .activeNavLink::after,
+.scrolledDark .activeNavLink::after {
+  background: #0579f6 !important;
+}
+
+.unscrolledDark .contactBtnPill,
+.unscrolledDark .contactBtnPill:link,
+.unscrolledDark .contactBtnPill:visited,
+.scrolledDark .contactBtnPill,
+.scrolledDark .contactBtnPill:link,
+.scrolledDark .contactBtnPill:visited {
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.55) !important;
+  background: transparent !important;
+}
+
+.unscrolledDark .contactBtnPill:hover,
+.scrolledDark .contactBtnPill:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+.unscrolledDark .menuToggle,
+.unscrolledDark .menuText,
+.unscrolledDark .closeText,
+.scrolledDark .menuToggle,
+.scrolledDark .menuText,
+.scrolledDark .closeText {
+  color: #ffffff !important;
+}
+
+.unscrolledDark .indicatorLine,
+.scrolledDark .indicatorLine {
+  background-color: #ffffff !important;
+}
+
+/* Header style when the side menu drawer is open */
+.headerMenuOpen {
+  background: transparent !important;
+  background-image: none !important;
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  top: 0 !important;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 80px !important;
+  padding: 0 clamp(2rem, 5vw, 4.5rem) !important;
+  z-index: 1030 !important;
+  position: fixed !important;
+}
+
+.headerMenuOpen .logoTitle {
+  color: #ffffff !important;
+}
+
+.headerMenuOpen .menuToggle {
+  color: #ffffff !important;
+  display: inline-flex !important;
+}
+
+.headerMenuOpen .closeText,
+.headerMenuOpen .closeSymbol {
+  color: #ffffff !important;
+}
+
+/* ── Logo Branding ─────────────────────────────────────────────────────── */
+.logo,
+.logo:link,
+.logo:visited {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 1020;
+  transition: opacity 250ms ease;
+  flex-shrink: 0;
+  color: #ffffff;
+}
+
+.logo:hover {
+  opacity: 0.9;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoIcon {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  display: block;
+  transition: width 380ms cubic-bezier(0.16, 1, 0.3, 1),
+    height 380ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scrolled .logoIcon,
+.scrolledDark .logoIcon {
+  width: 34px;
+  height: 34px;
+}
+
+.logoImg {
+  width: 165px;
+  height: 38px;
+  aspect-ratio: 165 / 38;
+  object-fit: contain;
+}
+
+.logoBrandWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logoTitle {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+/* ── Center: Desktop Navigation Bar ────────────────────────────────────── */
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.2rem, 2.2vw, 2.5rem);
+  transform-origin: center center;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: opacity 280ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 340ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.desktopNavHidden {
+  opacity: 0 !important;
+  transform: translateY(-8px) scale(0.92) !important;
+  pointer-events: none !important;
+}
+
+.desktopNavLink,
+.desktopNavLink:link,
+.desktopNavLink:visited {
+  position: relative;
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.4rem 0;
+  background: none !important;
+  display: inline-flex;
+  align-items: center;
+  transition: color 180ms ease;
+}
+
+.desktopNavLink:hover {
+  background: none !important;
+}
+
+.activeNavLink,
+.activeNavLink:link,
+.activeNavLink:visited {
+  font-weight: 600;
+  background: none !important;
+  position: relative;
+}
+
+.activeNavLink::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #0579f6;
+  border-radius: 2px;
+}
+
+/* ── Header Right: Contact Us Button & Menu Trigger ─────────────────────── */
+.headerRight {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  min-height: 40px;
+}
+
+/* Pill Contact Us Outlined Button (Matching Photo 2) */
+.contactBtnPill,
+.contactBtnPill:link,
+.contactBtnPill:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  background: transparent !important;
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  height: 40px;
+  padding: 0 1.4rem;
+  border-radius: 9999px;
+  box-shadow: none !important;
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  transition: opacity 240ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 320ms cubic-bezier(0.16, 1, 0.3, 1),
+    background 220ms ease,
+    border-color 220ms ease,
+    color 220ms ease;
+  flex-shrink: 0;
+  will-change: opacity, transform;
+}
+
+.contactBtnPill:hover {
+  transform: translateY(-1px);
+}
+
+.contactBtnHidden {
+  opacity: 0 !important;
+  transform: translateX(-16px) scale(0.88) !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  right: 0 !important;
+}
+
+.contactArrow {
+  font-size: 1.05rem;
+  line-height: 1;
+  transition: transform 180ms ease;
+}
+
+.contactBtnPill:hover .contactArrow {
+  transform: translateX(3px);
+}
+
+/* Menu Toggle Trigger Button (Used when scrolled and on mobile) */
+.menuToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 1035;
+  padding: 0.45rem 0.6rem;
+  border-radius: 4px;
+  user-select: none;
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  transition: opacity 280ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 340ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.menuToggle:hover {
+  opacity: 0.8;
+}
+
+/* On desktop when unscrolled and menu is closed, collapse menu toggle seamlessly */
+@media (min-width: 1024px) {
+  .menuToggleCollapsed {
+    opacity: 0 !important;
+    transform: translateX(20px) scale(0.88) !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    right: 0 !important;
+  }
+}
+
+/* Hide menu toggle on desktop when unscrolled */
+.menuToggleMobileOnly {
+  display: none !important;
+}
+
+.menuText {
+  color: #ffffff;
+}
+
+.menuIndicator {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22px;
+  height: 14px;
+}
+
+.indicatorLine {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+.closeText {
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.closeWord {
+  display: inline;
+}
+
+.closeSymbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Full Page Backdrop for Drawer ─────────────────────────────────────── */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(5, 5, 8, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1015;
+}
+
+/* ── Multi-Layer Curtains ──────────────────────────────────────────────── */
+.curtain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1021;
+}
+
+.curtainOrange {
+  background-color: #007cc4;
+  z-index: 1021;
+}
+
+.curtainDarkBlue {
+  background-color: #0b0f19;
+  z-index: 1022;
+}
+
+.curtainBlue {
+  background-color: #121824;
+  z-index: 1023;
+}
+
+/* ── Slide-down Drawer (Earlier Used Signature #007CC4 Blue) ─────────────── */
+.drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #007cc4;
+  z-index: 1024;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: fixed;
+}
+
+.drawerContent {
+  display: flex;
+  flex-direction: row-reverse;
+  /* linksWrapper on right, drawerFooter on left */
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  max-width: 800px;
+  height: auto;
+  margin-top: 5rem;
+  gap: 4rem;
+}
+
+.linksWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+  flex-shrink: 0;
+}
+
+.navItem {
+  transition: opacity 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.navLink,
+.navLink:link,
+.navLink:visited {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 2.2rem;
+  font-weight: 750;
+  color: #ffffff !important;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  transition: color 300ms ease, transform 250ms ease;
+  display: block;
+  line-height: 1.2;
+}
+
+.navLink:hover,
+.active,
+.active:link,
+.active:visited {
+  color: #111111 !important;
+  transform: translateX(6px);
+}
+
+/* Drawer Footer */
+.drawerFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  width: auto;
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.socials {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.socialLink {
+  color: #ffffff;
+  transition: all 300ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: transparent;
+  border: none;
+}
+
+.socialLink:hover {
+  color: #111111;
+  background-color: transparent;
+  transform: translateY(-2px);
+}
+
+.ctaWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ctaBtn,
+.ctaBtn:link,
+.ctaBtn:visited {
+  width: 100%;
+  max-width: 280px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: #111111;
+  color: #ffffff !important;
+  border: 1px solid #0055ff;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* Slide-up #0055ff hover fill overlay */
+.ctaBtn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background-color: #0055ff;
+  z-index: -1;
+  transition: height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ctaBtn:hover {
+  color: #ffffff !important;
+  border-color: #0055ff;
+  box-shadow: 0 15px 30px rgba(0, 85, 255, 0.35);
+  transform: translateY(-3px);
+}
+
+.ctaBtn:hover::after {
+  height: 100%;
+}
+
+/* ── Responsive Refinements ────────────────────────────────────────────── */
+@media (min-width: 1024px) and (max-width: 1220px) {
+  .desktopNav {
+    gap: 1.2rem;
+  }
+
+  .desktopNavLink {
+    font-size: 0.78rem;
+  }
+
+  .contactBtnPill {
+    padding: 0 1.15rem;
+    font-size: 0.75rem;
+    height: 38px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .desktopNav {
+    display: none !important;
+  }
+
+  .contactBtnPill {
+    display: none !important;
+  }
+
+  .header {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    transform-origin: center top !important;
+    padding: 0 1.25rem;
+    height: 64px;
+    width: 100%;
+    margin: 0 !important;
+    transition: width 400ms cubic-bezier(0.16, 1, 0.3, 1),
+      max-width 400ms cubic-bezier(0.16, 1, 0.3, 1),
+      top 400ms cubic-bezier(0.16, 1, 0.3, 1),
+      height 400ms cubic-bezier(0.16, 1, 0.3, 1),
+      padding 400ms cubic-bezier(0.16, 1, 0.3, 1),
+      border-radius 400ms cubic-bezier(0.16, 1, 0.3, 1),
+      background-color 400ms cubic-bezier(0.16, 1, 0.3, 1),
+      border-color 400ms cubic-bezier(0.16, 1, 0.3, 1),
+      box-shadow 400ms cubic-bezier(0.16, 1, 0.3, 1),
+      backdrop-filter 400ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  .unscrolled,
+  .unscrolledDark {
+    top: 0 !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 64px !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+  }
+
+  .scrolled,
+  .scrolledDark {
+    top: 0.5rem !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    width: calc(100% - 1.5rem) !important;
+    max-width: calc(100% - 1.5rem) !important;
+    margin: 0 !important;
+    height: 52px !important;
+    padding: 0 1.15rem !important;
+    border-radius: 9999px !important;
+  }
+
+  .menuToggle,
+  .menuToggleMobileOnly {
+    display: inline-flex !important;
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+    position: static !important;
+  }
+
+  .drawerContent {
+    flex-direction: column;
+    gap: 2.2rem;
+    margin-top: 4.5rem;
+    height: auto;
+    justify-content: center;
+    width: 90%;
+  }
+
+  .linksWrapper {
+    gap: 0.8rem;
+    align-items: center;
+  }
+
+  .navLink,
+  .navLink:link,
+  .navLink:visited {
+    font-size: clamp(1.6rem, 6vw, 2rem);
+    text-align: center;
+  }
+
+  .drawerFooter {
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 64px;
+    padding: 0 clamp(1.25rem, 4.5vw, 1.75rem);
+  }
+
+  .logoIcon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .logoTitle {
+    font-size: 1.35rem;
+  }
+
+  .menuText {
+    display: none !important;
+  }
+
+  .menuToggle {
+    padding: 0.35rem 0;
+    gap: 0;
+  }
+
+  .menuIndicator {
+    width: 25px;
+    height: 16px;
+  }
+
+  .indicatorLine {
+    height: 2.2px;
+    background-color: #ffffff;
+    border-radius: 2px;
+  }
+}
+
+/* ── Accessibility: Reduced Motion Preference ───────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+
+  .header,
+  .desktopNav,
+  .contactBtnPill,
+  .menuToggle,
+  .logoIcon {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

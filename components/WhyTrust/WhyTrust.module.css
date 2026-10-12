@@ -1,0 +1,544 @@
+.whyTrustSection {
+  background-color: #ffffff;
+  padding: 8rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 5rem;
+}
+
+.headerColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.label {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 600;
+  color: #000000;
+  line-height: 1.2;
+}
+
+.titleLine {
+  display: block;
+}
+
+@media (min-width: 1025px) {
+  .titleLine {
+    white-space: nowrap;
+  }
+}
+
+.desc {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #000000;
+  text-align: justify !important;
+}
+
+.subdesc {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #000000;
+  text-align: justify !important;
+}
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.pillarCard {
+  background-color: transparent;
+  border-bottom: 1px solid #e2e8f0;
+  border-radius: 0;
+  padding: 1.8rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.5rem;
+  transition: all 400ms cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.pillarCard:last-child {
+  border-bottom: none;
+}
+
+.pillarCard:hover {
+  transform: translateX(6px);
+}
+
+.iconWrapper {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #007CC4;
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), color 300ms ease;
+  flex-shrink: 0;
+}
+
+.pillarCard:hover .iconWrapper {
+  background-color: transparent;
+  color: #007CC4;
+  transform: scale(1.15);
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pillarTitle {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111111;
+  line-height: 1.3;
+}
+
+.descWrapper {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 450ms cubic-bezier(0.16, 1, 0.3, 1), opacity 350ms ease, margin 450ms ease;
+}
+
+.pillarCard:hover .descWrapper {
+  max-height: 100px;
+  opacity: 1;
+  margin-top: 0.5rem;
+}
+
+.pillarDesc {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #4b5563;
+  text-align: justify !important;
+}
+
+/* Desktop Circle Layout Styles */
+.desktopCircleWrapper {
+  position: relative;
+  width: 560px;
+  height: 560px;
+  margin: 0 0 0 auto;
+  display: block;
+}
+
+.desktopCircleContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: spin 30s linear infinite;
+}
+
+.desktopCircleWrapper:hover .desktopCircleContainer,
+.desktopCircleWrapper:hover .nodeIcon {
+  animation-play-state: paused;
+}
+
+.orbitTrack {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 430px;
+  height: 430px;
+  border: 2px dotted rgba(0, 124, 196, 0.25);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.circleHub {
+  width: 320px;
+  height: 320px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f8fafc;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 124, 196, 0.2);
+  border-radius: 50%;
+  padding: 2.5rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center !important;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 124, 196, 0.08);
+  transition: all 400ms cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 2;
+}
+
+.hubContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  text-align: center !important;
+}
+
+.hubPillarNum {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #007CC4;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: center !important;
+}
+
+.hubTitle {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111111;
+  line-height: 1.35;
+  text-align: center !important;
+}
+
+.hubDesc {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #4b5563;
+  text-align: center !important;
+}
+
+.circleNode {
+  width: 66px;
+  height: 66px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 400ms cubic-bezier(0.16, 1, 0.3, 1);
+  color: #007CC4;
+  z-index: 3;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.circleNode:hover,
+.activeNode {
+  background-color: #007CC4;
+  border-color: #007CC4;
+  color: #ffffff;
+  box-shadow: 0 0 25px rgba(0, 124, 196, 0.35);
+}
+
+.nodeIcon {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: spin-reverse 30s linear infinite;
+}
+
+.mobileCircleLayout {
+  display: none;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* ── Tablet refinement (Keep desktop rotating circle layout active) ────── */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .headerColumn {
+    position: sticky;
+    top: 90px;
+  }
+
+  .desktopCircleWrapper {
+    display: block;
+    width: 440px;
+    height: 440px;
+    transform: scale(0.78);
+    transform-origin: center right;
+    margin: 0 0 0 auto;
+  }
+
+  .mobileCircleLayout {
+    display: none;
+  }
+}
+
+/* ── Mobile Responsive Behavior ────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .whyTrustSection {
+    padding: 3.5rem 0 3rem 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .headerColumn {
+    position: static;
+  }
+
+  .desc,
+  .subdesc {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    text-align: justify !important;
+    text-justify: inter-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    text-align-last: left;
+  }
+
+  .desktopCircleWrapper {
+    display: none;
+  }
+
+  .mobileCircleLayout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .mobileDescCard {
+    width: 100%;
+    background: #ffffff;
+    border: 1.5px solid rgba(0, 124, 196, 0.2);
+    border-radius: 20px;
+    padding: 1.35rem 1.25rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 124, 196, 0.08);
+    position: relative;
+    z-index: 3;
+    min-height: 115px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  .mobileDescTitle {
+    font-family: var(--font-outfit), sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #111111;
+    line-height: 1.3;
+    margin: 0;
+    text-align: center;
+  }
+
+  .mobileDescText {
+    font-family: var(--font-inter), sans-serif;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: #4b5563;
+    margin: 0;
+    text-align: center;
+  }
+
+  .mobileCircleWrapper {
+    position: relative;
+    width: 270px;
+    height: 270px;
+    margin: 2.25rem auto 1.25rem auto;
+  }
+
+  .mobileConnectorLine {
+    position: absolute;
+    top: -36px;
+    bottom: 50%;
+    left: 50%;
+    width: 2px;
+    transform: translateX(-50%);
+    background: #000000;
+    z-index: 2;
+  }
+
+  .mobileConnectorDot {
+    position: absolute;
+    top: -38px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 3;
+  }
+
+  .mobileOrbitTrack {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 210px;
+    height: 210px;
+    border: 2px dotted rgba(0, 124, 196, 0.35);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .mobileCenterHub {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 78px;
+    height: 78px;
+    background: #ffffff;
+    border: 2.5px solid #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    z-index: 4;
+  }
+
+  .mobileCenterNum {
+    font-family: var(--font-outfit), sans-serif;
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1;
+    letter-spacing: -0.5px;
+  }
+
+  .mobileCircleNode {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 46px;
+    height: 46px;
+    background-color: #ffffff;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
+    color: #007CC4;
+    z-index: 3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    padding: 0;
+  }
+
+  .mobileActiveNode {
+    background-color: #007CC4 !important;
+    border-color: #007CC4 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 20px rgba(0, 124, 196, 0.45) !important;
+  }
+
+  .mobileNodeIcon {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobileNodeIcon svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .mobilePagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .pageDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #cbd5e1;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .activePageDot {
+    width: 24px;
+    border-radius: 12px;
+    background-color: #007CC4;
+    box-shadow: 0 0 10px rgba(0, 124, 196, 0.4);
+  }
+}

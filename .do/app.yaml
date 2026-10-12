@@ -1,0 +1,88 @@
+name: staffspectrum
+region: blr # Bangalore (blr), Frankfurt (fra), New York (nyc), San Francisco (sfo), Amsterdam (ams)
+services:
+  - name: web
+    github:
+      branch: main
+      deploy_on_push: true
+      repo: Staffspectrum/main_website
+    build_command: npx prisma generate && npm run build
+    run_command: npx prisma migrate deploy && npm start
+    environment_slug: node-js
+    instance_count: 1
+    instance_size_slug: basic-xxs # $5/month (512 MB RAM, 1 vCPU). For higher concurrency, select basic-xs ($10/mo, 1 GB RAM)
+    http_port: 3000
+    routes:
+      - path: /
+    envs:
+      # Database
+      - key: DATABASE_URL
+        scope: RUN_AND_BUILD_TIME
+        type: SECRET
+      - key: DATABASE_SSL
+        value: "true"
+        scope: RUN_TIME
+      - key: DATABASE_SSL_REJECT_UNAUTHORIZED
+        value: "false"
+        scope: RUN_TIME
+      - key: DB_POOL_MAX
+        value: "5"
+        scope: RUN_TIME
+
+      # Admin Security
+      - key: ADMIN_JWT_SECRET
+        scope: RUN_TIME
+        type: SECRET
+      - key: IP_HASH_SALT
+        scope: RUN_TIME
+        type: SECRET
+
+      # Cloudflare R2 Storage
+      - key: R2_ACCOUNT_ID
+        scope: RUN_TIME
+        type: SECRET
+      - key: R2_ACCESS_KEY_ID
+        scope: RUN_TIME
+        type: SECRET
+      - key: R2_SECRET_ACCESS_KEY
+        scope: RUN_TIME
+        type: SECRET
+      - key: R2_BUCKET_NAME
+        value: "staffspectrum-resumes-private"
+        scope: RUN_TIME
+      - key: R2_ENDPOINT
+        scope: RUN_TIME
+        type: SECRET
+
+      # SMTP Mailer
+      - key: SMTP_HOST
+        scope: RUN_TIME
+      - key: SMTP_PORT
+        value: "587"
+        scope: RUN_TIME
+      - key: SMTP_SECURE
+        value: "false"
+        scope: RUN_TIME
+      - key: SMTP_USER
+        scope: RUN_TIME
+        type: SECRET
+      - key: SMTP_PASS
+        scope: RUN_TIME
+        type: SECRET
+      - key: EMAIL_FROM
+        value: "Staff Spectrum <no-reply@staff-spectrum.com>"
+        scope: RUN_TIME
+      - key: CONTACT_NOTIFICATION_EMAIL
+        value: "info@staff-spectrum.com"
+        scope: RUN_TIME
+      - key: CONTACT_EMPLOYER_EMAIL
+        value: "info@staff-spectrum.com"
+        scope: RUN_TIME
+      - key: CONTACT_HR_EMAIL
+        value: "Hr@staff-spectrum.com"
+        scope: RUN_TIME
+
+      # Public Domain / Base URL (Used for resume download tokens in HR emails)
+      - key: APP_URL
+        value: "https://staff-spectrum.com"
+        scope: RUN_TIME

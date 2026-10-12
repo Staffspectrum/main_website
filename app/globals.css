@@ -1,0 +1,150 @@
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+  --text-muted: #737373;
+  --bg-dark: #111111;
+  --fg-dark: #ffffff;
+  --bg-gray: #f5f5f5;
+  --border-color: #e5e5e5;
+  --border-dark: #333333;
+  --font-inter: var(--font-outfit), sans-serif;
+  --font-editorial: var(--font-outfit), sans-serif;
+  --font-playfair: var(--font-outfit), sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  font-family: var(--font-outfit), sans-serif;
+}
+
+html, body {
+  max-width: 100vw;
+  overflow-x: clip;
+  font-family: var(--font-outfit), sans-serif;
+  font-weight: 400;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+}
+
+a, p, span, div, li, button, input, select, textarea, label {
+  font-family: var(--font-outfit), sans-serif;
+}
+
+/* All Main Headings use Outfit Semi-Bold (600) */
+h1, h2, h3, h4, h5, h6,
+[class*="title"], [class*="Title"], [class*="heading"], [class*="Heading"] {
+  font-family: var(--font-outfit), sans-serif !important;
+  font-weight: 600 !important;
+}
+
+/* All Body Texts use Outfit Normal (400) */
+p, span, a, button, input, select, textarea, li, label, small {
+  font-family: var(--font-outfit), sans-serif;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4.210rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.158rem);
+}
+
+h3 {
+  font-size: clamp(1.6rem, 3vw, 2.369rem);
+}
+
+h4 {
+  font-size: clamp(1.3rem, 2.2vw, 1.777rem);
+}
+
+h5 {
+  font-size: clamp(1.1rem, 1.8vw, 1.333rem);
+}
+
+small {
+  font-size: 0.750rem;
+}
+
+p {
+  font-family: var(--font-outfit), sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.65;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 clamp(1rem, 4vw, 1.25rem);
+  }
+
+  h1 {
+    font-size: clamp(2rem, 7.5vw, 2.75rem);
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 6vw, 2.25rem);
+  }
+
+  h3 {
+    font-size: clamp(1.35rem, 5vw, 1.75rem);
+  }
+
+  p, li, article, section, div, span {
+    text-justify: inter-word;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: left;
+  }
+}
+
+/* ── UI Component Utilities ── */
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.whitespace-pre {
+  white-space: pre;
+}
+
+.whitespace-pre-wrap {
+  white-space: pre-wrap;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* Ensure subsequent page sections and footer slide over fixed hero background */
+main > *:not(:first-child),
+footer {
+  position: relative;
+  z-index: 5;
+}

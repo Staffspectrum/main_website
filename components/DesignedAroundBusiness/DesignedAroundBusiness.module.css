@@ -1,0 +1,219 @@
+.whySection {
+  margin-bottom: 6rem;
+}
+
+.sectionHeader {
+  margin-bottom: 3.5rem;
+  max-width: 800px;
+}
+
+.introLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.1;
+  font-weight: 600;
+  color: #000000;
+  letter-spacing: -1px;
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.sectionDesc {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #000000;
+}
+
+.scrollStackContainer {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+}
+
+.whyCard {
+  grid-column: span 2;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  padding: 1.5rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.55rem;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.06);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card 1: Soft Sky Blue */
+.whyCard:nth-child(1) {
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+  border: 1.5px solid #0284c7;
+}
+.whyCard:nth-child(1) .iconContainer {
+  background-color: #0284c7;
+  color: #ffffff;
+}
+
+/* Card 2: Soft Lavender / Indigo */
+.whyCard:nth-child(2) {
+  background: linear-gradient(135deg, #e0e7ff 0%, #eef2ff 100%);
+  border: 1.5px solid #4f46e5;
+}
+.whyCard:nth-child(2) .iconContainer {
+  background-color: #4f46e5;
+  color: #ffffff;
+}
+
+/* Card 3: Soft Emerald Green */
+.whyCard:nth-child(3) {
+  background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+  border: 1.5px solid #059669;
+}
+.whyCard:nth-child(3) .iconContainer {
+  background-color: #059669;
+  color: #ffffff;
+}
+
+/* Card 4: Soft Amber / Gold */
+.whyCard:nth-child(4) {
+  grid-column: 2 / span 2;
+  background: linear-gradient(135deg, #fef3c7 0%, #fffbeb 100%);
+  border: 1.5px solid #d97706;
+}
+.whyCard:nth-child(4) .iconContainer {
+  background-color: #d97706;
+  color: #ffffff;
+}
+
+/* Card 5: Soft Rose / Pink */
+.whyCard:nth-child(5) {
+  grid-column: 4 / span 2;
+  background: linear-gradient(135deg, #ffe4e6 0%, #fff1f2 100%);
+  border: 1.5px solid #e11d48;
+}
+.whyCard:nth-child(5) .iconContainer {
+  background-color: #e11d48;
+  color: #ffffff;
+}
+
+/* Upward Scroll Animation Activation */
+.cardVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cardHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.iconWrapper {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cardNumber {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #007CC4;
+  opacity: 0.75;
+  position: absolute;
+  right: 0;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+}
+
+.cardTitle {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: clamp(1.05rem, 1.18vw, 1.25rem);
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  line-height: 1.22;
+  max-width: 260px;
+  text-align: center;
+}
+
+.cardDesc {
+  font-family: var(--font-inter), sans-serif;
+  font-size: clamp(0.78rem, 0.86vw, 0.88rem);
+  line-height: 1.42;
+  color: #1e293b;
+  margin: 0;
+  max-width: 260px;
+  padding: 0 0.35rem;
+  text-align: center;
+}
+
+/* Hover & Active Highlight Effects */
+.whyCard:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+.whyCard:hover .iconContainer {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* ── Mobile Responsive styles ──────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .scrollStackContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .whyCard,
+  .whyCard:nth-child(4),
+  .whyCard:nth-child(5) {
+    grid-column: auto;
+  }
+
+  .singlePositionBox {
+    height: 340px;
+  }
+}
+
+.dotItem {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.activeDot {
+  width: 28px;
+  border-radius: 10px;
+  background: #007CC4;
+}

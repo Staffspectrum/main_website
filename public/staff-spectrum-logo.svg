@@ -1,0 +1,24 @@
+<svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brand-gradient" x1="52" y1="34" x2="272" y2="292" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#29A6F2"/>
+      <stop offset="1" stop-color="#0E86D8"/>
+    </linearGradient>
+  </defs>
+  <path
+    d="M78 164C78 109.876 121.876 66 176 66C230.124 66 274 109.876 274 164C274 218.124 230.124 262 176 262C121.876 262 78 218.124 78 164Z"
+    stroke="url(#brand-gradient)"
+    stroke-width="44"
+    stroke-linecap="round"
+  />
+  <path
+    d="M85 92L162 78L128 144L85 92Z"
+    fill="url(#brand-gradient)"
+  />
+  <path
+    d="M241 241L285 286"
+    stroke="url(#brand-gradient)"
+    stroke-width="44"
+    stroke-linecap="round"
+  />
+</svg>
