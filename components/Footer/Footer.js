@@ -80,10 +80,6 @@ export default function Footer() {
 
         <div className={styles.bottomBar}>
           <div>&copy; 2026 Staff Spectrum. All rights reserved.</div>
-          <div className={styles.bottomLinks}>
-            <Link href="/privacy-policy">Privacy Policy</Link>
-            <Link href="/terms">Terms &amp; Conditions</Link>
-          </div>
         </div>
 
         <div className={styles.developerCredit}>

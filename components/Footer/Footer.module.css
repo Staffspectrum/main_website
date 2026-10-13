@@ -206,8 +206,9 @@
 
 .bottomBar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding-top: 1.5rem;
   font-family: var(--font-inter), sans-serif;
@@ -215,21 +216,6 @@
   color: rgba(255, 255, 255, 0.5) !important;
   position: relative;
   z-index: 2;
-}
-
-.bottomLinks {
-  display: flex;
-  gap: 2rem;
-}
-
-.bottomLinks a {
-  color: rgba(255, 255, 255, 0.5) !important;
-  text-decoration: none !important;
-  transition: color 0.2s ease;
-}
-
-.bottomLinks a:hover {
-  color: #ffffff !important;
 }
 
 .developerCredit {
