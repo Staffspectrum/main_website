@@ -79,19 +79,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.bottomBar}>
-          <div>&copy; 2026 Staff Spectrum. All rights reserved.</div>
-        </div>
-
-        <div className={styles.developerCredit}>
-          Developed by{" "}
-          <a 
-            href="https://www.rubicstudio.app/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className={styles.developerLink}
-          >
-            Rubic Studio
-          </a>
+          <div>&copy; 2026 Staffspectrum. All rights reserved.</div>
         </div>
       </div>
     </footer>
