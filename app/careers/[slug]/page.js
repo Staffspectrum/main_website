@@ -23,13 +23,13 @@ export async function generateMetadata({ params }) {
 
   if (!job) {
     return {
-      title: "Job Opening Not Found | Staff Spectrum Careers",
+      title: "Job Opening Not Found | Staffspectrum Careers",
       description: "The requested career opportunity could not be found.",
     };
   }
 
   return {
-    title: `${job.title} - Careers at Staff Spectrum | ${job.location}`,
+    title: `${job.title} - Careers at Staffspectrum | ${job.location}`,
     description: job.desc,
   };
 }

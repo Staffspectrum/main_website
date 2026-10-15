@@ -464,7 +464,7 @@ export default function AdminDashboardClient({ currentUser }) {
                 <div className={styles.brandLogoWrapper}>
                   <Image
                     src="/logo.png"
-                    alt="Staff Spectrum Logo"
+                    alt="Staffspectrum Logo"
                     width={34}
                     height={34}
                     className={styles.brandLogoImg}
@@ -472,7 +472,7 @@ export default function AdminDashboardClient({ currentUser }) {
                   />
                 </div>
                 <span className={styles.brandTitleText}>
-                  Staff<span className={styles.brandAccentText}>Spectrum</span>
+                  Staff<span className={styles.brandAccentText}>spectrum</span>
                 </span>
               </Link>
             </div>
@@ -608,7 +608,7 @@ export default function AdminDashboardClient({ currentUser }) {
           {/* Top Breadcrumb & Utilities Bar */}
           <div className={styles.topBar}>
             <div className={styles.breadcrumbGroup}>
-              <span>StaffSpectrum</span>
+              <span>Staffspectrum</span>
               <span>&gt;</span>
               <span className={styles.breadcrumbCurrent}>
                 <Clock size={14} />

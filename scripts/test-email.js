@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer";
 
 async function main() {
-  console.log("=== Staff Spectrum — SMTP Diagnostic Test ===");
+  console.log("=== Staffspectrum — SMTP Diagnostic Test ===");
 
   const host = process.env.SMTP_HOST;
   const port = parseInt(process.env.SMTP_PORT || "587", 10);
@@ -40,9 +40,9 @@ async function main() {
     const info = await transporter.sendMail({
       from,
       to,
-      subject: "Staff Spectrum — SMTP Configuration Test",
+      subject: "Staffspectrum — SMTP Configuration Test",
       text: "Congratulations! Your Gmail SMTP configuration is working correctly.",
-      html: "<p>Congratulations! Your <strong>Gmail SMTP</strong> configuration is working correctly on Staff Spectrum.</p>",
+      html: "<p>Congratulations! Your <strong>Gmail SMTP</strong> configuration is working correctly on Staffspectrum.</p>",
     });
 
     console.log(`✅ Test email sent successfully! Message ID: ${info.messageId}`);

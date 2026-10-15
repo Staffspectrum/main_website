@@ -324,7 +324,7 @@ export default function ChrmpPage() {
 
         {/* 7. CURRICULUM SYLLABUS SECTION */}
         <section className={styles.syllabusSection} id="curriculum">
-          <div className="container">
+          <div className={`container ${styles.syllabusContainer}`}>
             <div className={styles.centerHeader}>
               <div className={styles.sectionLabel}>CURRICULUM</div>
               <h2 className={styles.centerTitle}>What You Will Learn</h2>
@@ -347,6 +347,7 @@ export default function ChrmpPage() {
                       </li>
                     ))}
                   </ul>
+                  <div className={styles.syllabusLinesFiller} aria-hidden="true"></div>
                 </div>
               ))}
             </div>

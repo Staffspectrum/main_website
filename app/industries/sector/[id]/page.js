@@ -14,7 +14,7 @@ export async function generateMetadata({ params }) {
   const ind = industriesList.find((i) => i.id === parseInt(id, 10));
   if (!ind) return {};
   return {
-    title: `${ind.title} | Industries We Serve | Staff Spectrum`,
+    title: `${ind.title} | Industries We Serve | Staffspectrum`,
     description: ind.about,
   };
 }
@@ -97,18 +97,18 @@ export default async function SectorPage({ params }) {
           <div className={styles.navRow}>
             {prevIndustry ? (
               <Link href={`/industries/sector/${prevIndustry.id}`} className={styles.navBtn}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg className={styles.navArrow} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="19" y1="12" x2="5" y2="12" />
                   <polyline points="12 19 5 12 12 5" />
                 </svg>
-                <span>{prevIndustry.title}</span>
+                <span className={styles.navBtnText}>{prevIndustry.title}</span>
               </Link>
             ) : <div />}
 
             {nextIndustry ? (
               <Link href={`/industries/sector/${nextIndustry.id}`} className={`${styles.navBtn} ${styles.navBtnNext}`}>
-                <span>{nextIndustry.title}</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <span className={styles.navBtnText}>{nextIndustry.title}</span>
+                <svg className={styles.navArrow} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="5" y1="12" x2="19" y2="12" />
                   <polyline points="12 5 19 12 12 19" />
                 </svg>

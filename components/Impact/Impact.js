@@ -58,7 +58,7 @@ export default function Impact() {
           <div className={styles.label}>IMPACT</div>
           <h2 className={styles.title}>How we create impact</h2>
           <p className={styles.description}>
-            The core of everything Staff Spectrum does is to deliver powerful insights in a simple and compelling manner, creating a common language for understanding and improving your communication agility.
+            The core of everything Staffspectrum does is to deliver powerful insights in a simple and compelling manner, creating a common language for understanding and improving your communication agility.
           </p>
         </div>
 

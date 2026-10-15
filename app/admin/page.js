@@ -4,7 +4,7 @@ import { verifySessionToken, SESSION_COOKIE_NAME } from "../../lib/auth/session"
 import AdminDashboardClient from "./AdminDashboardClient";
 
 export const metadata = {
-  title: "Admin Dashboard | Staff Spectrum",
+  title: "Admin Dashboard | Staffspectrum",
   robots: {
     index: false,
     follow: false,

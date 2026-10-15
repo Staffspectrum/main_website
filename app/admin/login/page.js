@@ -51,7 +51,7 @@ export default function AdminLoginPage() {
           <div style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
             <Image
               src="/logo.png"
-              alt="Staff Spectrum"
+              alt="Staffspectrum"
               width={36}
               height={36}
               priority

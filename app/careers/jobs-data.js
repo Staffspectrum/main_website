@@ -40,7 +40,7 @@ export const jobsList = [
     qualification: "Bachelor's Degree",
     desc: "We are looking to hire a dedicated content writer to create content for blogs, articles, product descriptions, social media, and the company website.",
     linkSlug: "content-writer",
-    overview: "Staff Spectrum is looking for a creative, articulate Content Writer to produce engaging, informative, and SEO-optimized content across our digital touchpoints. You will collaborate closely with marketing, design, and recruitment teams to create compelling narratives that position Staff Spectrum as a premier HR and talent solutions partner.",
+    overview: "Staffspectrum is looking for a creative, articulate Content Writer to produce engaging, informative, and SEO-optimized content across our digital touchpoints. You will collaborate closely with marketing, design, and recruitment teams to create compelling narratives that position Staffspectrum as a premier HR and talent solutions partner.",
     responsibilities: [
       "Research industry-related topics (combining online sources, interviews, and market studies) to generate insightful articles.",
       "Write clear, persuasive marketing copy to promote our services and HR consultancy solutions.",
@@ -71,7 +71,7 @@ export const jobsList = [
     qualification: "Degree in Design",
     desc: "You will be designing a wide variety of assets across digital and offline media. Requires brilliant creative ideas, self-start attitude, and amazing attention to detail.",
     linkSlug: "creative-graphic-designer",
-    overview: "We are seeking a talented and imaginative Creative Graphic Designer who can visually elevate the Staff Spectrum brand. From compelling social media graphics, whitepapers, and presentation decks to UI visual concepts and offline marketing collateral, your work will define our visual brand identity.",
+    overview: "We are seeking a talented and imaginative Creative Graphic Designer who can visually elevate the Staffspectrum brand. From compelling social media graphics, whitepapers, and presentation decks to UI visual concepts and offline marketing collateral, your work will define our visual brand identity.",
     responsibilities: [
       "Conceptualize visuals based on creative briefs, project goals, and brand aesthetic guidelines.",
       "Design diverse digital assets including website banners, infographics, social media campaigns, and marketing decks.",
@@ -102,7 +102,7 @@ export const jobsList = [
     qualification: "MBA / Graduate",
     desc: "We are looking to employ an experienced recruiting manager to supervise our recruitment team and ensure that all recruiting operations run smoothly.",
     linkSlug: "recruitment-operations-manager",
-    overview: "Staff Spectrum is expanding its recruitment leadership team. We are hiring a Recruitment Operations Manager / Relationship Manager to oversee our talent acquisition specialists, manage client relationships across enterprise accounts, optimize hiring pipelines, and ensure seamless delivery of high-caliber talent.",
+    overview: "Staffspectrum is expanding its recruitment leadership team. We are hiring a Recruitment Operations Manager / Relationship Manager to oversee our talent acquisition specialists, manage client relationships across enterprise accounts, optimize hiring pipelines, and ensure seamless delivery of high-caliber talent.",
     responsibilities: [
       "Manage daily recruitment operations, monitoring KPIs, time-to-hire, quality-of-hire, and recruiter productivity.",
       "Build and nurture strong relationships with key corporate clients, understanding their ongoing hiring mandates.",
@@ -164,7 +164,7 @@ export const jobsList = [
     qualification: "B.Tech / MCA",
     desc: "We are looking for experienced .Net developers with 12+ years of hands-on expertise who are ready to work on optimized international business schedules.",
     linkSlug: "senior-net-developer",
-    overview: "Staff Spectrum requires veteran Senior .Net Developers with over a decade of hands-on software development excellence. You will build and scale high-concurrency enterprise applications, modernize legacy systems into microservices, and collaborate with global distributed teams.",
+    overview: "Staffspectrum requires veteran Senior .Net Developers with over a decade of hands-on software development excellence. You will build and scale high-concurrency enterprise applications, modernize legacy systems into microservices, and collaborate with global distributed teams.",
     responsibilities: [
       "Design, build, and maintain efficient, reusable, and reliable C# / .NET / .NET Core code.",
       "Architect resilient microservices and RESTful Web APIs on Microsoft Azure.",

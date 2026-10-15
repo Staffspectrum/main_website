@@ -3,8 +3,8 @@ import Footer from "../../components/Footer/Footer";
 import BlogClient from "./BlogClient";
 
 export const metadata = {
-  title: "Blog & Insights | Staff Spectrum",
-  description: "Read the latest insights on recruitment, HR systems, practical training, compliance, and scaling businesses from the team at Staff Spectrum.",
+  title: "Blog & Insights | Staffspectrum",
+  description: "Read the latest insights on recruitment, HR systems, practical training, compliance, and scaling businesses from the team at Staffspectrum.",
 };
 
 export default function BlogPage() {

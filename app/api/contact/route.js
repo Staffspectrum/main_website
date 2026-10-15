@@ -166,7 +166,7 @@ export async function handleContactPost(
     return NextResponse.json(
       {
         success: true,
-        message: "Thank you for connecting with Staff Spectrum. Your enquiry has been received.",
+        message: "Thank you for connecting with Staffspectrum. Your enquiry has been received.",
         id: savedEnquiry.id,
       },
       { status: 201 }

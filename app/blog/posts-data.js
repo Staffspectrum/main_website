@@ -5,7 +5,7 @@ export const blogPosts = [
     excerpt: "Behind every successful business is a strong team. Learn why professional HR support and structured systems make all the difference in hiring, retention, and scaling.",
     category: "HR Systems",
     date: "July 10, 2026",
-    author: "Staff Spectrum Team",
+    author: "Staffspectrum Team",
     readTime: "4 min read",
     ctaType: "b2b",
     content: [
@@ -66,7 +66,7 @@ export const blogPosts = [
     excerpt: "Theoretical knowledge gets you in the door, but real workplace experience makes you successful. Discover why practical training bridges the gap in HR education.",
     category: "Careers & Training",
     date: "July 08, 2026",
-    author: "Staff Spectrum Team",
+    author: "Staffspectrum Team",
     readTime: "5 min read",
     ctaType: "chrmp",
     content: [
@@ -140,7 +140,7 @@ export const blogPosts = [
     excerpt: "Recruitment is a strategic driver of business growth, not just resume scanning. Learn how hands-on experience and HR technology set top recruiters apart.",
     category: "Careers & Training",
     date: "July 05, 2026",
-    author: "Staff Spectrum Team",
+    author: "Staffspectrum Team",
     readTime: "5 min read",
     ctaType: "chrmp",
     content: [
@@ -241,7 +241,7 @@ export const blogPosts = [
     excerpt: "Finding the right talent and building HR compliance can be tough for growing companies. Here is why businesses trust Staffspectrum as their dedicated HR partner in Kerala.",
     category: "Business Solutions",
     date: "July 01, 2026",
-    author: "Staff Spectrum Team",
+    author: "Staffspectrum Team",
     readTime: "6 min read",
     ctaType: "b2b",
     content: [
@@ -308,7 +308,7 @@ export const blogPosts = [
     excerpt: "Scaling a business is exciting, but growing without proper HR structure can lead to chaos. Learn why you need strong HR systems before you scale your team.",
     category: "HR Systems",
     date: "June 25, 2026",
-    author: "Staff Spectrum Team",
+    author: "Staffspectrum Team",
     readTime: "5 min read",
     ctaType: "b2b",
     content: [
@@ -377,7 +377,7 @@ export const blogPosts = [
     excerpt: "Every successful business is built by people. Discover why professional HR support is essential for building a stable, compliant, and scalable organization.",
     category: "Business Solutions",
     date: "July 12, 2026",
-    author: "Staff Spectrum Team",
+    author: "Staffspectrum Team",
     readTime: "5 min read",
     ctaType: "b2b",
     content: [

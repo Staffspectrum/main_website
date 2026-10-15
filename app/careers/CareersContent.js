@@ -46,7 +46,7 @@ export default function CareersContent({ initialJobs = jobsList }) {
             </h2>
             <div className={styles.overviewContent}>
               <p className={styles.overviewText}>
-                Maintaining a strong candidate-centric recruitment strategy, Staff Spectrum has always been a deluge of opportunities. Let's work and grow together!
+                Maintaining a strong candidate-centric recruitment strategy, Staffspectrum has always been a deluge of opportunities. Let's work and grow together!
               </p>
             </div>
           </div>

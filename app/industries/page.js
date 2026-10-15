@@ -4,7 +4,7 @@ import IndustriesClient from "./IndustriesClient";
 import { Suspense } from "react";
 
 export const metadata = {
-  title: "Industries We Serve | Staff Spectrum",
+  title: "Industries We Serve | Staffspectrum",
   description: "Explore our specialised recruitment and HR solutions across 12 key global industries including Technology, Retail, Hospitality, BFSI, and Healthcare.",
 };
 

@@ -20,13 +20,13 @@ export async function generateMetadata({ params }) {
   
   if (!post) {
     return {
-      title: "Post Not Found | Staff Spectrum",
+      title: "Post Not Found | Staffspectrum",
       description: "The requested blog post could not be found.",
     };
   }
 
   return {
-    title: `${post.title} | Staff Spectrum Blog`,
+    title: `${post.title} | Staffspectrum Blog`,
     description: post.excerpt,
   };
 }
@@ -127,7 +127,7 @@ export default async function BlogPostPage({ params }) {
             ) : (
               <div className={styles.ctaContent}>
                 <div className={styles.ctaLabel}>BUSINESS SOLUTION</div>
-                <h3 className={styles.ctaTitle}>Simplify Your People Operations with Staff Spectrum</h3>
+                <h3 className={styles.ctaTitle}>Simplify Your People Operations with Staffspectrum</h3>
                 <p className={styles.ctaText}>
                   Partner with Staffspectrum for complete HR solutions in Kerala. From structured recruitment to payroll and compliance support, we help you hire smarter, manage better, and grow stronger.
                 </p>

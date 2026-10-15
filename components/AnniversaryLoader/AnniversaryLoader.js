@@ -70,7 +70,7 @@ export default function AnniversaryLoader() {
           onClick={handleClose}
           role="dialog"
           aria-modal="true"
-          aria-label="StaffSpectrum 10th Anniversary Announcement"
+          aria-label="Staffspectrum 10th Anniversary Announcement"
         >
           <motion.div
             className={styles.modal}
@@ -98,7 +98,7 @@ export default function AnniversaryLoader() {
             <div className={styles.bannerWrapper}>
               <Image
                 src="/Staffspectrum_ A Decade of Possibilities.jpg.jpeg"
-                alt="StaffSpectrum - A Decade of Possibilities"
+                alt="Staffspectrum - A Decade of Possibilities"
                 width={2048}
                 height={768}
                 priority

@@ -5,9 +5,9 @@ import { getPublishedJobs } from "../../lib/data/jobs";
 export const revalidate = 0;
 
 export const metadata = {
-  title: "Careers | Staff Spectrum",
+  title: "Careers | Staffspectrum",
   description:
-    "Explore career opportunities at Staff Spectrum. We align top-tier talent with excellent growth-driven opportunities in Engineering, Human Resources, Creative and Editorial fields.",
+    "Explore career opportunities at Staffspectrum. We align top-tier talent with excellent growth-driven opportunities in Engineering, Human Resources, Creative and Editorial fields.",
 };
 
 export default async function CareersPage() {

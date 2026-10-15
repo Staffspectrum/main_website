@@ -8,7 +8,7 @@ const outfit = Outfit({
 });
 
 export const metadata = {
-  title: "Staff Spectrum | HR Solution in Kerala",
+  title: "Staffspectrum | HR Solution in Kerala",
   description: "Providing High Performing Staffing Solutions",
   icons: {
     icon: "/logo.png",
